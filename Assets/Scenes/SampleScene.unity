@@ -756,7 +756,7 @@ MonoBehaviour:
   m_SoftZoneWidth: 0.15
   m_SoftZoneHeight: 2
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: -0.5
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -5543,6 +5543,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 686343560}
     m_Modifications:
+    - target: {fileID: 2814655195262680588, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
+      propertyPath: vCam
+      value: 
+      objectReference: {fileID: 2105916493}
+    - target: {fileID: 2814655195262680588, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
+      propertyPath: movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_RootOrder
       value: -1
