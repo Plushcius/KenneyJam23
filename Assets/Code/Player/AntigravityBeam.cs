@@ -11,8 +11,9 @@ public class AntigravityBeam : MonoBehaviour
 
     void Start()
     {
-        sr.DOColor(new Color(1, 1, 1, 0.5f), 1)
-            .SetLoops(-1, LoopType.Yoyo);
+        sr.DOColor(new Color(1, 1, 1, 0.3f), 1)
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.Linear);
     }
 
     // Update is called once per frame
@@ -23,11 +24,9 @@ public class AntigravityBeam : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // todo nosta collision gameobjectia ylöspäin
         if (collision.gameObject.layer == 6)
         {
-            print("Lol");
-            collision.transform.position = collision.transform.position + Vector3.up * Time.fixedDeltaTime * beamSpeed;
+            collision.GetComponent<Collectable>().IsInGravityBeam = true;
         }
     }
 }
