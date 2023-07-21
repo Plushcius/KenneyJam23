@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312463860716556116}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -129,8 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 74179041381674735}
   - component: {fileID: 5904236583662861304}
-  - component: {fileID: 8490326913192243283}
   - component: {fileID: 6087142947324974790}
+  - component: {fileID: 8695969630526440937}
   m_Layer: 0
   m_Name: BEAM COLLIDER
   m_TagString: Untagged
@@ -180,8 +180,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &8490326913192243283
-BoxCollider2D:
+--- !u!114 &6087142947324974790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588320118562495605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71a708c541def004ea8002409fcc91c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 1645680035085669057}
+  beamSpeed: 1
+--- !u!60 &8695969630526440937
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -214,7 +228,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.79}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -224,22 +238,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.26, y: 6.7}
-  m_EdgeRadius: 0
---- !u!114 &6087142947324974790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1588320118562495605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71a708c541def004ea8002409fcc91c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 1645680035085669057}
-  beamSpeed: 1
+  m_Points:
+    m_Paths:
+    - - {x: 0.053356953, y: 1.7795228}
+      - {x: -0.750507, y: 1.7482557}
+      - {x: -1.3080149, y: -5.0703754}
+      - {x: 1.3357235, y: -5.126512}
+      - {x: 0.7599402, y: 1.7791429}
+  m_UseDelaunayMesh: 0
 --- !u!1 &5885495953933272739
 GameObject:
   m_ObjectHideFlags: 0

@@ -5547,10 +5547,6 @@ PrefabInstance:
       propertyPath: vCam
       value: 
       objectReference: {fileID: 2105916493}
-    - target: {fileID: 2814655195262680588, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: movementSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -5594,6 +5590,10 @@ PrefabInstance:
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4812670125675710997, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 5885495953933272739, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_Name
