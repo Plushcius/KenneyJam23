@@ -747,14 +747,14 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.2
-  m_ScreenY: 0.5
+  m_ScreenY: 0.27499998
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0
+  m_DeadZoneWidth: 0.07
+  m_DeadZoneHeight: 2
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.28
-  m_SoftZoneHeight: 1
+  m_SoftZoneWidth: 0.15
+  m_SoftZoneHeight: 2
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -867,7 +867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.389999, y: 0, z: -60}
+  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1307,7 +1307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735358401}
   - component: {fileID: 735358402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: kirja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1391,7 +1391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852512603}
   - component: {fileID: 852512604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: saha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1847,7 +1847,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1002270691}
   - component: {fileID: 1002270692}
-  m_Layer: 0
+  - component: {fileID: 1002270694}
+  - component: {fileID: 1002270693}
+  m_Layer: 6
   m_Name: hammasharja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1921,6 +1923,79 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1002270693
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002270690}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.74, y: 1.07}
+    newSize: {x: 0.74, y: 1.07}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.74, y: 1.07}
+  m_EdgeRadius: 0
+--- !u!50 &1002270694
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002270690}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1039647225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,7 +2477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213369289}
   - component: {fileID: 1213369290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: kahvipannu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2738,7 +2813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1436221027}
   - component: {fileID: 1436221028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: setelit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2822,7 +2897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448178310}
   - component: {fileID: 1448178311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: maalipaletti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2938,7 +3013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491431203}
   - component: {fileID: 1491431204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: tela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3022,7 +3097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510925235}
   - component: {fileID: 1510925236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Peliohjain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3342,7 +3417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1722150122}
   - component: {fileID: 1722150123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paistinpannu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724599194}
   - component: {fileID: 1724599195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: USB tikku
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4536,7 +4611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105916492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.389999, y: 0, z: -60}
+  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4618,24 +4693,12 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.101206
       objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3710313
+      value: 6.61
       objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4669,17 +4732,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5885495953933272739, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_Name
       value: Player alien
-      objectReference: {fileID: 0}
-    - target: {fileID: 5885495953933272739, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

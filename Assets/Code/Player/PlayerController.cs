@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     {
         t = transform;
         ilotikku = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+
+
     }
 
     
