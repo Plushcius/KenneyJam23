@@ -5,16 +5,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Transform t;
+    public float movementSpeed = 0.1f;
+    public FixedJoystick ilotikku;
 
     void Start()
     {
         t = transform;
+        ilotikku = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
     }
 
     
     void Update()
     {
-        t.position = t.position + Vector3.right * Input.GetAxis("Horizontal");
-        print(Input.GetAxis("Horizontal"));
+        if (Input.GetAxis("Horizontal") != 0)
+            t.position = t.position + Vector3.right * movementSpeed * Input.GetAxis("Horizontal");
+        else
+            t.position = t.position + Vector3.right * movementSpeed * ilotikku.Horizontal;
     }
 }
