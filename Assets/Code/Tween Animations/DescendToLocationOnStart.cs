@@ -9,6 +9,11 @@ public class DescendToLocationOnStart : MonoBehaviour
 
     void Start()
     {
+        t = transform;  
+    }
+
+    public void BUTTON_MoveCamera()
+    {
         t = transform;
         t.DOMoveY(20, 4.5f)
             .From();

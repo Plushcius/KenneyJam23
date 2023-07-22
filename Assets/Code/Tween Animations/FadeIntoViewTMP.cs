@@ -28,6 +28,6 @@ public class FadeIntoViewTMP : MonoBehaviour
 
     private void OnDisable()
     {
-        print(text.DOKill());
+        text.DOKill();
     }
 }

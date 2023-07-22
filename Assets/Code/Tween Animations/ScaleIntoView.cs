@@ -25,6 +25,6 @@ public class ScaleIntoView : MonoBehaviour
 
     private void OnDisable()
     {
-        print(transform.DOKill());
+        transform.DOKill();
     }
 }
