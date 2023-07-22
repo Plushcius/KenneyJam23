@@ -38,8 +38,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ShowText(string message, float duration = 4)
+    public void ShowText(string message, float duration = 6)
     {
+        CancelInvoke(nameof(ClearText));
         dialogueText.text = message;
         Invoke(nameof(ClearText), duration);
     }

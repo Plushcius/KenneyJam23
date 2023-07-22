@@ -14,7 +14,7 @@ public class ItemCollector : MonoBehaviour
             switch (item)
             {
                 case CollectableType.Toothbrush:
-                    GameManager.I.ShowText("Well, this in somekind of cleaning tool. Oh! They use it for their teeth. What?! Humans have teeth?");
+                    GameManager.I.ShowText("Well, this in somekind of cleaning tool. Oh! They use it for their teeth. What?! Humans have teeth?", 7);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.CoffeePot:
@@ -22,23 +22,23 @@ public class ItemCollector : MonoBehaviour
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.FryingPan:
-                    GameManager.I.ShowText("You can fry food with this one. Or used it as async weapon. Winner winner chicken dinner it is.");
+                    GameManager.I.ShowText("You can fry food with this one. Or used it as async weapon. Winner winner chicken dinner it is.", 7);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.GameController:
-                    GameManager.I.ShowText("Humans like to consume blue light. This device is for moving yourself on the screen. Why they don't just use their brain for it?");
+                    GameManager.I.ShowText("Humans like to consume blue light. This device is for moving yourself on the screen. Why they don't just use their brain for it?", 8);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintRoller:
-                    GameManager.I.ShowText("You can decorate your homebase with this!");
+                    GameManager.I.ShowText("You can decorate your homebase with this!", 5);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintBucket:
-                    GameManager.I.ShowText("Humans can do something called art. You can use brushes to put paint to canvas... Eh.. What?");
+                    GameManager.I.ShowText("Humans can do something called art. You can use brushes to put paint to canvas... Eh.. What?", 7);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.USBStick:
-                    GameManager.I.ShowText("Oh! Here is visual footage called video. Let's see what's inside! *inserts it to ship computer* ewww... I think I'm not allowed to see that... Let's put it back...");
+                    GameManager.I.ShowText("Oh! Here is visual footage called video. Let's see what's inside! *inserts it to ship computer* ewww... I think I'm not allowed to see that... Let's put it back...", 10);
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 case CollectableType.Cash:
@@ -46,11 +46,11 @@ public class ItemCollector : MonoBehaviour
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
-                    GameManager.I.ShowText("I like this one! My scanne rsays you can consume information with this by reading it.");
+                    GameManager.I.ShowText("I like this one! My scanne rsays you can consume information with this by reading it.", 7);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Saw:
-                    GameManager.I.ShowText("Ouch, this is sharp! You can cut trees with this. We don't do that in our planet. I just put it back where I found it.");
+                    GameManager.I.ShowText("Ouch, this is sharp! You can cut trees with this. We don't do that in our planet. I just put it back where I found it.", 8);
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 default:
