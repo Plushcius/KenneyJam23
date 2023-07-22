@@ -23,7 +23,8 @@ public class FadeIntoViewTMP : MonoBehaviour
 
     void Fade()
     {
-        text.DOColor(initialColor, fadeInTime);
+        text.DOColor(initialColor, fadeInTime)
+            .SetEase(Ease.Linear);
     }
 
     private void OnDisable()
