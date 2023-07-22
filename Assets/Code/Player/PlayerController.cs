@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public static bool OnVictorySpin;
     public static PlayerController I;
 
+    // end animation
+    public GameObject momBeam;
+
     void Start()
     {
         I = this;
@@ -58,8 +61,47 @@ public class PlayerController : MonoBehaviour
         vCam.enabled = true;
     }
 
+    [ContextMenu("End Animation")]
+    public void EndAnimation()
+    {
+        momBeam.SetActive(true);
+        momBeam.transform.parent = null;
+        Invoke(nameof(DisableOwnBeam), 0.5f);
+        t.DOMoveY(10, 5f)
+            .OnComplete(EndAnimPhase2);
+    }
+
+    void EndAnimPhase2()
+    {
+        momBeam.SetActive(false);
+        transform.GetChild(0).gameObject.SetActive(false);
+        GameObject.Find("Game view").transform.DOMoveY(-20, 5)
+            .OnComplete(GMEndScreen);
+    }
+
+    void GMEndScreen()
+    {
+        GameManager.I.ShowEndScreen();
+    }
+
+    void DisableOwnBeam()
+    {
+        beam.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        t.DOKill();
+    }
+
     void Update()
     {
+        if (GameManager.I.Won)
+        {
+            vCam.enabled = false;
+            return;
+        }
+
         horizontalInput = 0;
 
         if (Input.GetAxis("Horizontal") != 0)

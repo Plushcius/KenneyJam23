@@ -16,10 +16,9 @@ public class AntigravityBeam : MonoBehaviour
             .SetEase(Ease.Linear);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        sr.DOKill();
     }
 
     private void OnTriggerStay2D(Collider2D collision)

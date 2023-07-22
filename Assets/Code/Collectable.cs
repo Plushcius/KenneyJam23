@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CollectableType { Toothbrush, }
+
 public class Collectable : MonoBehaviour
 {
-    public enum CollectableType { Toothbrush, }
+    
     public CollectableType ItemType;
     Transform t;
     public float beamSpeed = 0.5f;
