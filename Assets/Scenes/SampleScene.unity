@@ -1072,6 +1072,44 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_text
+      value: 'Explod... Ahem!
+
+        Explore Earth!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.49056602
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.42226335
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.18280526
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4286409775
+      objectReference: {fileID: 0}
+    - target: {fileID: 348034632909254671, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 437172692489836978, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
       propertyPath: m_text
       value: 'Earthly
@@ -1125,6 +1163,10 @@ PrefabInstance:
     - target: {fileID: 458171877882950623, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -29.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020795850738852420, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 356.96
       objectReference: {fileID: 0}
     - target: {fileID: 6020795850738852420, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1212,7 +1254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8158747969054296087, guid: e619752b822615f42b4c5d6a9456a1aa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1646,7 +1688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &686343560
 Transform:
   m_ObjectHideFlags: 0
