@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         beam.SetActive(true);
         vCam.enabled = true;
+        vCam.gameObject.SetActive(true);
         GameManager.I.onScreenInputUI.SetActive(true);
     }
 
