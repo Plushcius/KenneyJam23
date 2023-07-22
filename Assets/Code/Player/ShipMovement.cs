@@ -9,10 +9,12 @@ public class ShipMovement : MonoBehaviour
     public Transform shipContainer;
     public float swingRange = 15;
     public Tween tween;
-    //public Tween timescaleTween;
+    private bool stabilizing;
+    public static ShipMovement I;
 
     private void Awake()
     {
+        I = this;
         DOTween.Init(true, true, LogBehaviour.Verbose).SetCapacity(200, 10);
     }
 
@@ -29,6 +31,11 @@ public class ShipMovement : MonoBehaviour
         tween.Kill();
     }
 
+    public void BUTTON_Stabilize()
+    {
+        stabilizing = true;
+    }
+
     void Update()
     {
         if (PlayerController.OnVictorySpin)
@@ -37,8 +44,9 @@ public class ShipMovement : MonoBehaviour
             return;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (stabilizing || Input.GetKey(KeyCode.Space))
         {
+            stabilizing = false;
             tween.timeScale = 0.5f;
         }
         else
