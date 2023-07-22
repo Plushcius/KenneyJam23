@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public GameObject onScreenInputUI;
     public TMP_Text dialogueText;
 
+    public AudioSource momShipArrival;
+
     private void Awake()
     {
         I = this;
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
         {
             Won = true;            
             onScreenInputUI?.SetActive(false);
+            momShipArrival.Play();
             Invoke(nameof(DelayedWinGame), 2);
 
             //foreach (var item in collectedItems)

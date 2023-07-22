@@ -6964,6 +6964,7 @@ MonoBehaviour:
   endScreenUI: {fileID: 0}
   onScreenInputUI: {fileID: 520927343}
   dialogueText: {fileID: 489389840}
+  momShipArrival: {fileID: 167593864}
 --- !u!4 &2104249560
 Transform:
   m_ObjectHideFlags: 0
