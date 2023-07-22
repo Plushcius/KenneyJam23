@@ -1923,7 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 8
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 9
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -3367,7 +3367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 1
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -3796,7 +3796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 6
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 5
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -4150,7 +4150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 4
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -4327,7 +4327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 3
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -4772,7 +4772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 2
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -4949,7 +4949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 0
+  ItemType: 6
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
@@ -6538,6 +6538,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1752526692}
+    - target: {fileID: 2814655195262680588, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
+      propertyPath: movementSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3139009418278348041, guid: 562b3ab96c2b76f4086885a987bfc205, type: 3}
       propertyPath: m_RootOrder
       value: -1
