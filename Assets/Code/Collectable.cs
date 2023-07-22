@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CollectableType { Toothbrush, }
+public enum CollectableType { Toothbrush, CoffeePot, FryingPan, GameController, PaintRoller, PaintBucket, USBStick, Cash, Book, Saw, }
 
 public class Collectable : MonoBehaviour
 {
-    
+
     public CollectableType ItemType;
     Transform t;
     public float beamSpeed = 0.5f;

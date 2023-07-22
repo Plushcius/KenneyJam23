@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject endScreenUI;
     public GameObject onScreenInputUI;
+    public TMP_Text dialogueText;
 
     private void Awake()
     {
         I = this;
+        ClearText();
     }
 
     void Start()
@@ -33,6 +36,17 @@ public class GameManager : MonoBehaviour
         {
             endScreenUI.SetActive(true);
         }
+    }
+
+    public void ShowText(string message, float duration = 3)
+    {
+        dialogueText.text = message;
+        Invoke(nameof(ClearText), duration);
+    }
+
+    void ClearText()
+    {
+        dialogueText.text = "";
     }
 
     void Update()
