@@ -21,6 +21,11 @@ public class Collectable : MonoBehaviour
         initialHeight = t.position.y;
     }
 
+    public void DropItem()
+    {
+
+    }
+
     void FixedUpdate()
     {
         if (IsInGravityBeam)
@@ -34,6 +39,4 @@ public class Collectable : MonoBehaviour
                 t.position = t.position + Vector3.down * Time.fixedDeltaTime * fallSpeed;
         }
     }
-
-
 }

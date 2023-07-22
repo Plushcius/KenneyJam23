@@ -15,53 +15,43 @@ public class ItemCollector : MonoBehaviour
             {
                 case CollectableType.Toothbrush:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
-
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.CoffeePot:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.FryingPan:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.GameController:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintRoller:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintBucket:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.USBStick:
                     GameManager.I.ShowText("");
-                    // drop
-
+                    collision.GetComponent<Collectable>().DropItem();
                     break;
                 case CollectableType.Cash:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
                     GameManager.I.ShowText("");
-                    GameManager.I.AddToCollectedItems(item);
-                    PlayerController.I.DoVictorySpin();
+                    AcceptItem(item, collision);
                     break;
                 case CollectableType.Saw:
                     GameManager.I.ShowText("");
-                    // drop
+                    collision.GetComponent<Collectable>().DropItem();
                     break;
                 default:
                     break;
@@ -75,5 +65,6 @@ public class ItemCollector : MonoBehaviour
     {
         GameManager.I.AddToCollectedItems(type);
         PlayerController.I.DoVictorySpin();
+        Destroy(collision.gameObject);
     }
 }
