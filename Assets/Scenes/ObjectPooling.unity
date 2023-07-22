@@ -383,6 +383,7 @@ MonoBehaviour:
   destroyTime: 1
   distanceNormal: 3
   distanceImportant: 2
+  usePool: 1
 --- !u!1 &1794056166
 GameObject:
   m_ObjectHideFlags: 0

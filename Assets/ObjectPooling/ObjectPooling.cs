@@ -19,8 +19,8 @@ public class ObjectPooling : MonoBehaviour
             onRelease => { onRelease.SetActive(false); },
             onDestroy => { Destroy(onDestroy); },
             collectionCheck: false,
-            defaultCapacity: 20,
-            maxSize: 20);
+            defaultCapacity: 10,
+            maxSize: 10);
 
         InvokeRepeating(nameof(SpawnStuff), 1f, 0.2f);
     }
@@ -29,21 +29,27 @@ public class ObjectPooling : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            var x = usePool ? _pool.Get() : Instantiate(normalObject);
-            x.transform.position = Random.insideUnitSphere * distanceNormal;
-            x.transform.parent = normalObjectParent;
-            Destroy(x, destroyTime);
+            if (usePool)
+            {
+                var x = _pool.Get();
+                x.transform.position = Random.insideUnitSphere * distanceNormal;
+                x.transform.parent = normalObjectParent;
+                StartCoroutine(DelayedRelease(x));
+            }
+            else
+            {
+                var x = Instantiate(normalObject);
+                x.transform.position = Random.insideUnitSphere * distanceNormal;
+                x.transform.parent = normalObjectParent;
+                Destroy(x, destroyTime);
+            }
         }
+    }
 
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    var x = Instantiate(importantObject);
-        //    x.transform.position = Random.insideUnitSphere * distanceNormal;
-        //    x.transform.parent = importantObjectParent;
-        //    Destroy(x, destroyTime);
-        //}
-
-
+    private IEnumerator DelayedRelease(GameObject obj)
+    {
+        yield return new WaitForSeconds(destroyTime);
+        _pool.Release(obj);
     }
 
     void Update()
