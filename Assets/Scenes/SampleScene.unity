@@ -3804,7 +3804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b24e280ef1f2ea409374cabecb47def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemType: 6
+  ItemType: 7
   beamSpeed: 0.5
   fallSpeed: 1
   IsInGravityBeam: 0
