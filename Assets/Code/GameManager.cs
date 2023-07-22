@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager I;
 
     public GameObject endScreenUI;
+    public GameObject onScreenInputUI;
     
     void Start()
     {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
             Won = true;
             print("won game, rewards: ");
             PlayerController.I.Invoke(nameof(PlayerController.I.EndAnimation), 2);
+            onScreenInputUI?.SetActive(false);
 
             foreach (var item in collectedItems)
             {

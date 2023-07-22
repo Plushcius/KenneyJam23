@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public void DoVictorySpin()
     {
         OnVictorySpin = true;
+        beam.SetActive(false);
         t.localRotation = Quaternion.Euler(0, 0, 0);
         t.DORotate(new Vector3(0, 0, 360), 2f, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
@@ -42,6 +43,9 @@ public class PlayerController : MonoBehaviour
 
     private void ResetVictorySpinStatus()
     {
+        if (GameManager.I.Won == false)
+            beam.SetActive(true);
+
         OnVictorySpin = false;
     }
 
@@ -49,9 +53,10 @@ public class PlayerController : MonoBehaviour
     void Entrance()
     {
         vCam.enabled = false;
-        t.DOMove(new Vector3(t.position.x + 4, t.position.y + 7, t.position.z), 3f)
+        t.DOMove(new Vector3(t.position.x + 5, t.position.y + 10, t.position.z), 4f)
             .From()
             .SetEase(Ease.OutSine)
+            .SetDelay(0.5f)
             .OnComplete(StartBeamAndCamera);
     }
 
@@ -59,6 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         beam.SetActive(true);
         vCam.enabled = true;
+        GameManager.I.onScreenInputUI.SetActive(true);
     }
 
     [ContextMenu("End Animation")]
