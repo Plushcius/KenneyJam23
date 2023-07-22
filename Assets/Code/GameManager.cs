@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
     [ContextMenu("WinGame")]
     void DelayedWinGame()
     {
-        ShowText("end game text");
+        ShowText("Home calling... Oh, I'm late! WOOOOOOOOOO!");
         PlayerController.I.Invoke(nameof(PlayerController.I.EndAnimation), 2);
     }
 }

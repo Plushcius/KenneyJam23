@@ -14,43 +14,43 @@ public class ItemCollector : MonoBehaviour
             switch (item)
             {
                 case CollectableType.Toothbrush:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("Well, this in somekind of cleaning tool. Oh! They use it for their teeth. What?! Humans have teeth?");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.CoffeePot:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("My scanner says this is drug used by humans to stay awake, especially in gamejams.");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.FryingPan:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("You can fry food with this one. Or used it as async weapon. Winner winner chicken dinner it is.");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.GameController:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("Humans like to consume blue light. This device is for moving yourself on the screen. Why they don't just use their brain for it?");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintRoller:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("You can decorate your homebase with this!");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintBucket:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("Humans can do something called art. You can use brushes to put paint to canvas... Eh.. What?");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.USBStick:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("Oh! Here is visual footage called video. Let's see what's inside! *inserts it to ship computer* ewww... I think I'm not allowed to see that... Let's put it back...");
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 case CollectableType.Cash:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("This rules whole humanworld.. Just a piece of paper");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("I like this one! My scanne rsays you can consume information with this by reading it.");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Saw:
-                    GameManager.I.ShowText(item.ToString() + " text");
+                    GameManager.I.ShowText("Ouch, this is sharp! You can cut trees with this. We don't do that in our planet. I just put it back where I found it.");
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 default:
