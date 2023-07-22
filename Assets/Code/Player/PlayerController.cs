@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject beam;
     public Cinemachine.CinemachineVirtualCamera vCam;
-    FixedJoystick joystick;
+    public FixedJoystick joystick;
     Transform t;
     float horizontalInput;
 
@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         I = this;
         t = transform;
-        joystick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
         vCam.enabled = false;
         beam.SetActive(false);
         OnVictorySpin = false;
@@ -52,6 +51,7 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Entrance")]
     void Entrance()
     {
+        Camera.main.GetComponent<DescendToLocationOnStart>().enabled = true;
         vCam.enabled = false;
         t.DOMove(new Vector3(t.position.x + 5, t.position.y + 10, t.position.z), 4f)
             .From()

@@ -11,10 +11,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject endScreenUI;
     public GameObject onScreenInputUI;
-    
-    void Start()
+
+    private void Awake()
     {
         I = this;
+    }
+
+    void Start()
+    {
+        onScreenInputUI?.SetActive(false);
     }
 
     public void AddToCollectedItems(CollectableType collectable)

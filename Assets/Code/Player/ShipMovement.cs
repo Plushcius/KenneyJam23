@@ -8,6 +8,7 @@ public class ShipMovement : MonoBehaviour
     Sequence sequence;
     public Transform shipContainer;
     public float swingRange = 15;
+    public float swingDuration = 1.5f;
     public Tween tween;
     private bool stabilizing;
     public static ShipMovement I;
@@ -21,7 +22,7 @@ public class ShipMovement : MonoBehaviour
     void Start()
     {
         shipContainer.localRotation = Quaternion.Euler(0,0, swingRange);
-        tween = shipContainer.DORotate(new Vector3(0, 0, -swingRange), 1)
+        tween = shipContainer.DORotate(new Vector3(0, 0, -swingRange), swingDuration)
             .SetLoops(-1, LoopType.Yoyo)
             .SetEase(Ease.Linear);
     }
