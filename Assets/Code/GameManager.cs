@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ShowText(string message, float duration = 3)
+    public void ShowText(string message, float duration = 4)
     {
         dialogueText.text = message;
         Invoke(nameof(ClearText), duration);
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("WinGame")]
     void DelayedWinGame()
     {
         ShowText("end game text");
