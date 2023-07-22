@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
         Invoke(nameof(ClearText), duration);
     }
 
+
     void ClearText()
     {
         dialogueText.text = "";
@@ -51,17 +52,22 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!Won && collectedItems.Count == 1)
+        if (!Won && collectedItems.Count == 8)
         {
-            Won = true;
-            print("won game, rewards: ");
-            PlayerController.I.Invoke(nameof(PlayerController.I.EndAnimation), 2);
+            Won = true;            
             onScreenInputUI?.SetActive(false);
+            Invoke(nameof(DelayedWinGame), 2);
 
-            foreach (var item in collectedItems)
-            {
-                print(item.ToString());
-            }
+            //foreach (var item in collectedItems)
+            //{
+            //    print(item.ToString());
+            //}
         }
+    }
+
+    void DelayedWinGame()
+    {
+        ShowText("end game text");
+        PlayerController.I.Invoke(nameof(PlayerController.I.EndAnimation), 2);
     }
 }

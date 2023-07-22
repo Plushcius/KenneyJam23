@@ -14,43 +14,43 @@ public class ItemCollector : MonoBehaviour
             switch (item)
             {
                 case CollectableType.Toothbrush:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.CoffeePot:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.FryingPan:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.GameController:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintRoller:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.PaintBucket:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.USBStick:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 case CollectableType.Cash:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Saw:
-                    GameManager.I.ShowText("");
+                    GameManager.I.ShowText(item.ToString() + " text");
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 default:

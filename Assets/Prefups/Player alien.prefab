@@ -407,9 +407,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   movementBoundaryLeft: -39.5
-  movementBoundaryRight: 25
+  movementBoundaryRight: 125
   beam: {fileID: 8560313492470657797}
   vCam: {fileID: 0}
+  joystick: {fileID: 0}
   momBeam: {fileID: 4464390323278094911}
 --- !u!1 &6325868322098339140
 GameObject:
@@ -631,6 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipContainer: {fileID: 6636435892010881876}
   swingRange: 25
+  swingDuration: 1.5
 --- !u!1 &8560313492470657797
 GameObject:
   m_ObjectHideFlags: 0
