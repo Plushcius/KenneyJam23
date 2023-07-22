@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
 
     public void DropItem()
     {
-
+        GetComponent<Rigidbody2D>().simulated = false;
     }
 
     void FixedUpdate()
