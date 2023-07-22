@@ -20,26 +20,30 @@ public class ShipMovement : MonoBehaviour
     {
         shipContainer.localRotation = Quaternion.Euler(0,0, swingRange);
         tween = shipContainer.DORotate(new Vector3(0, 0, -swingRange), 1)
-            .SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
-        //timescaleTween = tween.do;
+            .SetLoops(-1, LoopType.Yoyo)
+            .SetEase(Ease.Linear);
     }
 
     private void OnDisable()
     {
-        sequence.Kill();
+        tween.Kill();
     }
 
     void Update()
     {
+        if (PlayerController.OnVictorySpin)
+        {
+            tween.timeScale = 0;
+            return;
+        }
+
         if (Input.GetKey(KeyCode.Space))
         {
             tween.timeScale = 0.5f;
-            //tween.DOTimeScale(tween.ElapsedPercentage(), 3f);
         }
         else
         {
             tween.timeScale = 1f;
-            //tween.DOTimeScale(tween.ElapsedPercentage(), 1f);
         }
     }
 }

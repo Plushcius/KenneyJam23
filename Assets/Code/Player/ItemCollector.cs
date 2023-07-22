@@ -9,6 +9,7 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             print("Collected: " + collision.gameObject.name);
+            PlayerController.I.DoVictorySpin();
             Destroy(collision.gameObject);        
         }
     }

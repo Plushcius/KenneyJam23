@@ -5,19 +5,41 @@ using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
-    Transform t;
-    public float movementSpeed = 0.1f;
-    public FixedJoystick ilotikku;
-    public Cinemachine.CinemachineVirtualCamera vCam;
+    public float movementSpeed = 0.1f, movementBoundaryLeft = -39.5f, movementBoundaryRight = -4f;
+
     public GameObject beam;
+    public Cinemachine.CinemachineVirtualCamera vCam;
+    FixedJoystick joystick;
+    Transform t;
+    float horizontalInput;
+
+    public static bool OnVictorySpin;
+    public static PlayerController I;
 
     void Start()
     {
+        I = this;
         t = transform;
-        ilotikku = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+        joystick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
         vCam.enabled = false;
         beam.SetActive(false);
+        OnVictorySpin = false;
         Entrance();
+    }
+
+    [ContextMenu("VictorySpin")]
+    public void DoVictorySpin()
+    {
+        OnVictorySpin = true;
+        t.localRotation = Quaternion.Euler(0, 0, 0);
+        t.DORotate(new Vector3(0, 0, 360), 2f, RotateMode.FastBeyond360)
+            .SetEase(Ease.Linear)
+            .OnComplete(ResetVictorySpinStatus);
+    }
+
+    private void ResetVictorySpinStatus()
+    {
+        OnVictorySpin = false;
     }
 
     [ContextMenu("Entrance")]
@@ -35,12 +57,22 @@ public class PlayerController : MonoBehaviour
         beam.SetActive(true);
         vCam.enabled = true;
     }
-    
+
     void Update()
     {
+        horizontalInput = 0;
+
         if (Input.GetAxis("Horizontal") != 0)
-            t.position = t.position + Vector3.right * Time.deltaTime * movementSpeed * Input.GetAxis("Horizontal");
+            horizontalInput = Input.GetAxis("Horizontal");
         else
-            t.position = t.position + Vector3.right * Time.deltaTime * movementSpeed * ilotikku.Horizontal;
+            horizontalInput = joystick.Horizontal;
+
+        if (horizontalInput < 0 && t.localPosition.x < movementBoundaryLeft)
+            return;
+
+        if (horizontalInput > 0 && t.localPosition.x > movementBoundaryRight)
+            return;
+
+        t.position += horizontalInput * movementSpeed * Time.deltaTime * Vector3.right;
     }
 }

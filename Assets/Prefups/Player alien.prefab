@@ -292,9 +292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  ilotikku: {fileID: 0}
-  vCam: {fileID: 0}
+  movementBoundaryLeft: -39.5
+  movementBoundaryRight: -4
   beam: {fileID: 8560313492470657797}
+  vCam: {fileID: 0}
 --- !u!1 &6325868322098339140
 GameObject:
   m_ObjectHideFlags: 0
