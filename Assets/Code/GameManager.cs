@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
         if (!Won && collectedItems.Count == 8)
         {
             Won = true;            
-            onScreenInputUI?.SetActive(false);
             momShipArrival.Play();
             Invoke(nameof(DelayedWinGame), 2);
 
@@ -73,6 +72,7 @@ public class GameManager : MonoBehaviour
     void DelayedWinGame()
     {
         ShowText("Home calling... Oh, I'm late! WOOOOOOOOOO!");
+        onScreenInputUI?.SetActive(false);
         PlayerController.I.Invoke(nameof(PlayerController.I.EndAnimation), 2);
     }
 }
