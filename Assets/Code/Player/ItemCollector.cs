@@ -65,6 +65,7 @@ public class ItemCollector : MonoBehaviour
     {
         GameManager.I.AddToCollectedItems(type);
         PlayerController.I.DoVictorySpin();
+        GameManager.I.PlayCollectSound();
         Destroy(collision.gameObject);
     }
 }

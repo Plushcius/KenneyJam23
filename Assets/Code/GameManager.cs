@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text dialogueText;
 
     public AudioSource momShipArrival;
+    public AudioTweens creditsTweening;
+    public AudioSource creditsMusic;
+    public AudioSource collectSfx;
 
     private void Awake()
     {
@@ -38,6 +41,15 @@ public class GameManager : MonoBehaviour
         {
             endScreenUI.SetActive(true);
         }
+
+        creditsMusic.volume = 0;
+        creditsTweening.TWEEN_VolumeTo(0.2f, 7);
+        creditsMusic.Play(150000);
+    }
+
+    public void PlayCollectSound()
+    {
+        collectSfx.Play();
     }
 
     public void ShowText(string message, float duration = 6)
@@ -55,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!Won && collectedItems.Count == 8)
+        if (!Won && collectedItems.Count == 1) // todo change to 8
         {
             Won = true;            
             momShipArrival.Play();
