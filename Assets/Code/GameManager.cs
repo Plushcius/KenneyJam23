@@ -73,12 +73,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            collectedItems.Add(CollectableType.USBStick);
-        }
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    collectedItems.Add(CollectableType.USBStick);
+        //}
 
-        if (!Won && collectedItems.Count == 1) // todo change to 8
+        if (!Won && collectedItems.Count == 8) // todo change to 8
         {
             Won = true;            
             momShipArrival.Play();

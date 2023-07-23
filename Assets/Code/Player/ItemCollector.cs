@@ -47,7 +47,7 @@ public class ItemCollector : MonoBehaviour
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
-                    GameManager.I.ShowText("I like this one! My scanne rsays you can consume information with this by reading it.", 8);
+                    GameManager.I.ShowText("I like this one! My scanner says you can consume information with this by reading it.", 8);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Saw:
