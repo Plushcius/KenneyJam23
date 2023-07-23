@@ -442,7 +442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78000059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f6915f9ab75124fa7fb4da68db59df, type: 3}
   m_Name: 
@@ -478,8 +478,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287203721
-  m_fontColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0.9999915}
+    rgba: 4288185344
+  m_fontColor: {r: 0, g: 0.5159313, b: 0.5943396, a: 0.9999915}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -901,6 +901,7 @@ GameObject:
   - component: {fileID: 220277163}
   - component: {fileID: 220277162}
   - component: {fileID: 220277161}
+  - component: {fileID: 220277164}
   m_Layer: 5
   m_Name: Credits True end Button
   m_TagString: Untagged
@@ -926,7 +927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20262, y: 17}
+  m_AnchoredPosition: {x: 19852.99, y: 17}
   m_SizeDelta: {x: 660, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220277161
@@ -972,7 +973,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220277162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220277164}
+        m_TargetAssemblyTypeName: OpenLink, Assembly-CSharp
+        m_MethodName: OpenURL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &220277162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1024,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220277159}
   m_CullTransparentMesh: 1
+--- !u!114 &220277164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220277159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e7c44e052556b489edd96f763f28c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 --- !u!4 &246289370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3951757367735989021, guid: b9867feb0a35eb84ba74b4a3e64a8b38, type: 3}
@@ -2248,7 +2274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
+  m_LocalPosition: {x: 10.816069, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2535,7 +2561,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530478895}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f6915f9ab75124fa7fb4da68db59df, type: 3}
   m_Name: 
@@ -2567,8 +2593,8 @@ MonoBehaviour:
     fly-by), digifishmusic (peeeerfect), grunz (success low), lharman94 (arpeggiator
     end credits), SkyRaeVoicing (Hmm in question boy/girl). Thanks for playing, please
     leave feedback and have a wonderful day.  \tBye.\t You can click the red exit
-    button now.\t\tBrb.\t\t\tAfk.\t\t\t\t\t\tStill here?\t\t\t\tImpressive patience
-    patience!\t\t\t\t\tThree.\t\t\t\t--> [ Project Website ] <--"
+    button now.\t\tBrb.\t\t\tAfk.\t\t\t\t\t\tStill here?\t\t\t\tImpressive patience!\t\t\t\t\tThree.\t\t\t\t-->
+    [ Project Website ] <--"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 46588c7ac22930742a3487caaa1d8b8c, type: 2}
   m_sharedMaterial: {fileID: -2006187964471787981, guid: 46588c7ac22930742a3487caaa1d8b8c, type: 2}
@@ -2577,8 +2603,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.9999915}
+    rgba: 4282335039
+  m_fontColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0.9999915}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8310,7 +8336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105916492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
+  m_LocalPosition: {x: 10.816069, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8588,8 +8614,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288651167
-  m_fontColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 0.9999974}
+    rgba: 4288754504
+  m_fontColor: {r: 0.2823856, g: 0.19975968, b: 0.6320754, a: 0.9999974}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8920,7 +8946,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3804861231938052055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36f6915f9ab75124fa7fb4da68db59df, type: 3}
   m_Name: 
@@ -9093,8 +9119,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.9999915}
+    rgba: 4282533391
+  m_fontColor: {r: 0.058072276, g: 0.2735849, b: 0.26067215, a: 0.9999915}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
