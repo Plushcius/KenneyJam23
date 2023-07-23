@@ -43,7 +43,7 @@ public class ItemCollector : MonoBehaviour
                     collision.GetComponent<Collectable>().DropItem();
                     break;
                 case CollectableType.Cash:
-                    GameManager.I.ShowText("This rules whole humanworld.. Just a piece of paper", 6);
+                    GameManager.I.ShowText("This rules whole human world.. Just a piece of paper", 6);
                     AcceptItem(item, collision);
                     break;
                 case CollectableType.Book:
