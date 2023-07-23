@@ -68,7 +68,10 @@ public class PlayerController : MonoBehaviour
         beam.SetActive(true);
         vCam.enabled = true;
         vCam.gameObject.SetActive(true);
+
+#if UNITY_ANDROID
         GameManager.I.onScreenInputUI.SetActive(true);
+#endif
     }
 
     [ContextMenu("End Animation")]
