@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         {
             Won = true;            
             momShipArrival.Play();
-            Invoke(nameof(DelayedWinGame), 2);
+            Invoke(nameof(DelayedWinGame), 7); // need time to show final message
 
             //foreach (var item in collectedItems)
             //{

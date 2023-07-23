@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     // end animation
     public GameObject momBeam;
 
+    public AudioTweens playerUfoHum;
+    public AudioSource endCreditsMusic;
+
     void Start()
     {
         I = this;
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
         momBeam.SetActive(true);
         momBeam.transform.parent = null;
         Invoke(nameof(DisableOwnBeam), 0.5f);
+        playerUfoHum.TWEEN_VolumeTo(0, 2);
         t.DOMoveY(10, 5f)
             .OnComplete(EndAnimPhase2);
     }
@@ -89,6 +93,7 @@ public class PlayerController : MonoBehaviour
     void GMEndScreen()
     {
         GameManager.I.ShowEndScreen();
+
     }
 
     void DisableOwnBeam()
