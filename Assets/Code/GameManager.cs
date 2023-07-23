@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public AudioTweens creditsTweening;
     public AudioSource creditsMusic;
     public AudioSource collectSfx;
+    public AudioSource alienHmm;
 
     private void Awake()
     {
@@ -43,13 +44,18 @@ public class GameManager : MonoBehaviour
         }
 
         creditsMusic.volume = 0;
-        creditsTweening.TWEEN_VolumeTo(0.2f, 7);
+        creditsTweening.TWEEN_VolumeTo(0.2f, 10);
         creditsMusic.Play(150000);
     }
 
     public void PlayCollectSound()
     {
         collectSfx.Play();
+    }
+
+    public void PlayAlienHmmSound()
+    {
+        alienHmm.Play();
     }
 
     public void ShowText(string message, float duration = 6)
@@ -67,6 +73,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            collectedItems.Add(CollectableType.USBStick);
+        }
+
         if (!Won && collectedItems.Count == 1) // todo change to 8
         {
             Won = true;            

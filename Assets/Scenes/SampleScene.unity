@@ -1465,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d303e9302458914dbce8f8ee3a0c276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 150
 --- !u!1 &415279913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.119572, y: -0.011031151, z: -60}
+  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8226,9 +8227,10 @@ MonoBehaviour:
   onScreenInputUI: {fileID: 520927343}
   dialogueText: {fileID: 489389840}
   momShipArrival: {fileID: 167593864}
-  creditsTweening: {fileID: 0}
+  creditsTweening: {fileID: 346331082}
   creditsMusic: {fileID: 346331083}
-  collectSfx: {fileID: 0}
+  collectSfx: {fileID: 303056077}
+  alienHmm: {fileID: 0}
 --- !u!4 &2104249560
 Transform:
   m_ObjectHideFlags: 0
@@ -8308,7 +8310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105916492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.119572, y: -0.011031151, z: -60}
+  m_LocalPosition: {x: 10.389999, y: -0.011031151, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

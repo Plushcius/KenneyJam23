@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Scroller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 10;
+    Transform t;
+
     void Start()
     {
-        
+        t = transform;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        t.position += speed * Time.deltaTime * Vector3.left; 
     }
 }
